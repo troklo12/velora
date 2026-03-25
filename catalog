@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collections — VELORA</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="navbar-top-bar">
+  Free worldwide shipping on orders over €200 &nbsp;|&nbsp; <a href="#">Explore New Season →</a>
+</div>
+
+<!-- NAVBAR -->
+<nav class="velora-navbar">
+  <div class="container">
+    <div class="navbar-main">
+      <a href="index.html" class="velora-logo">VEL<span>O</span>RA</a>
+      <ul class="navbar-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html" class="active">Collections</a></li>
+        <li><a href="catalog.html">New Arrivals</a></li>
+        <li><a href="catalog.html">Sale</a></li>
+        <li><a href="stylist.html">Stylist</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <form class="navbar-search-form">
+          <input type="text" placeholder="Search..." />
+          <button type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <button class="navbar-icon-btn"><i class="bi bi-heart"></i></button>
+        <button class="navbar-icon-btn"><i class="bi bi-person"></i></button>
+        <button class="navbar-icon-btn" style="position:relative;"><i class="bi bi-bag"></i><span class="cart-badge">2</span></button>
+        <button class="navbar-mobile-toggle" id="mobileMenuToggle"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Collections</a></li>
+        <li><a href="catalog.html">New Arrivals</a></li>
+        <li><a href="catalog.html">Sale</a></li>
+        <li><a href="stylist.html">Personal Stylist</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="velora-breadcrumb justify-content-center mb-3">
+      <a href="index.html">Home</a>
+      <span class="sep"><i class="bi bi-chevron-right" style="font-size:9px;"></i></span>
+      <span class="current">Collections</span>
+    </div>
+    <h1 class="page-hero-title">All <em>Collections</em></h1>
+    <p style="font-size:14px;color:var(--warm-gray);margin-top:14px;letter-spacing:0.03em;">
+      Thoughtfully curated pieces for the contemporary wardrobe.
+    </p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section class="section-pad-sm">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- SIDEBAR FILTERS -->
+      <div class="col-lg-3 col-xl-2 d-none d-lg-block">
+        <div class="filter-sidebar">
+
+          <!-- Search within catalog -->
+          <div class="filter-group">
+            <div class="catalog-search-wrap" style="border:1px solid var(--beige);border-radius:4px;background:#fff;padding:0 12px;display:flex;align-items:center;gap:8px;">
+              <i class="bi bi-search" style="color:var(--sand);font-size:13px;"></i>
+              <input type="text" id="catalogSearchInput" placeholder="Search products..." style="border:none;outline:none;padding:10px 0;font-family:var(--font-body);font-size:13px;color:var(--charcoal);background:transparent;width:100%;" />
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="filter-group-title">Category</div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat-coats" class="filter-checkbox filter-cat" value="outerwear" />
+              <label for="cat-coats">Coats & Jackets <span class="filter-option-count">8</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat-dresses" class="filter-checkbox filter-cat" value="dresses" />
+              <label for="cat-dresses">Dresses <span class="filter-option-count">12</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat-knitwear" class="filter-checkbox filter-cat" value="knitwear" />
+              <label for="cat-knitwear">Knitwear <span class="filter-option-count">9</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat-tailoring" class="filter-checkbox filter-cat" value="tailoring" />
+              <label for="cat-tailoring">Tailoring <span class="filter-option-count">7</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat-trousers" class="filter-checkbox filter-cat" value="trousers" />
+              <label for="cat-trousers">Trousers <span class="filter-option-count">6</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat-shirts" class="filter-checkbox filter-cat" value="shirts" />
+              <label for="cat-shirts">Shirts & Blouses <span class="filter-option-count">10</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat-accessories" class="filter-checkbox filter-cat" value="accessories" />
+              <label for="cat-accessories">Accessories <span class="filter-option-count">14</span></label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="cat-footwear" class="filter-checkbox filter-cat" value="footwear" />
+              <label for="cat-footwear">Footwear <span class="filter-option-count">5</span></label>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="filter-group-title">Size</div>
+            <div class="filter-option">
+              <input type="checkbox" id="size-xs" class="filter-checkbox filter-size" value="XS" />
+              <label for="size-xs">XS</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="size-s" class="filter-checkbox filter-size" value="S" />
+              <label for="size-s">S</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="size-m" class="filter-checkbox filter-size" value="M" />
+              <label for="size-m">M</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="size-l" class="filter-checkbox filter-size" value="L" />
+              <label for="size-l">L</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="size-xl" class="filter-checkbox filter-size" value="XL" />
+              <label for="size-xl">XL</label>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="filter-group-title">Price Range</div>
+            <input type="range" class="price-range-slider" min="0" max="1500" value="1500" id="priceRange" />
+            <div class="price-range-display">
+              <span>€ 0</span>
+              <span id="priceRangeVal">€ 1500</span>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="filter-group-title">Colour</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
+              <span class="color-swatch" style="background:#C4B8A8;width:24px;height:24px;" title="Camel"></span>
+              <span class="color-swatch" style="background:#2C2C2C;width:24px;height:24px;" title="Black"></span>
+              <span class="color-swatch" style="background:#6B2737;width:24px;height:24px;" title="Burgundy"></span>
+              <span class="color-swatch" style="background:#5C6247;width:24px;height:24px;" title="Olive"></span>
+              <span class="color-swatch" style="background:#F8F5F0;width:24px;height:24px;border:1px solid var(--beige);" title="Ivory"></span>
+              <span class="color-swatch" style="background:#8B7355;width:24px;height:24px;" title="Cognac"></span>
+            </div>
+          </div>
+
+          <button class="btn-velora btn-outline-velora w-100 mt-3" onclick="document.querySelectorAll('.filter-checkbox').forEach(c=>c.checked=false);" style="font-size:10px;padding:11px;">
+            Clear All Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- PRODUCT GRID -->
+      <div class="col-lg-9 col-xl-10">
+
+        <!-- Toolbar -->
+        <div class="catalog-toolbar">
+          <!-- Mobile search -->
+          <div class="catalog-search-wrap d-lg-none">
+            <i class="bi bi-search"></i>
+            <input type="text" id="catalogSearchInput" placeholder="Search products..." />
+          </div>
+          <span class="catalog-count"><span id="productsCount">16 items</span></span>
+          <div class="catalog-sort ms-auto">
+            <span class="sort-label d-none d-md-inline">Sort by</span>
+            <select class="sort-select" id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name-asc">Name: A–Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="row g-4" id="productsGrid">
+
+          <!-- Product 1 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Oversized Wool Coat" data-category="outerwear" data-price="490" data-sizes="XS,S,M,L,XL">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#d9cfc2,#b8a898);"></div>
+                <span class="product-card-badge badge-new">New</span>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Outerwear</div>
+                <div class="product-card-name"><a href="product.html">Oversized Wool Coat</a></div>
+                <div class="product-card-price"><span class="price-current">€ 490</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Satin Slip Dress" data-category="dresses" data-price="320" data-sizes="XS,S,M,L">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#c4b0a0,#a09080);"></div>
+                <span class="product-card-badge badge-new">New</span>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Dresses</div>
+                <div class="product-card-name"><a href="product.html">Satin Slip Dress</a></div>
+                <div class="product-card-price"><span class="price-current">€ 320</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Structured Blazer" data-category="tailoring" data-price="380" data-sizes="XS,S,M,L,XL">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#b8b0a0,#908878);"></div>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Tailoring</div>
+                <div class="product-card-name"><a href="product.html">Structured Blazer</a></div>
+                <div class="product-card-price"><span class="price-current">€ 380</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Leather Structured Bag" data-category="accessories" data-price="560" data-sizes="OS">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#a89880,#887860);"></div>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Accessories</div>
+                <div class="product-card-name"><a href="product.html">Leather Structured Bag</a></div>
+                <div class="product-card-price"><span class="price-current">€ 560</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Wide Leg Trousers" data-category="trousers" data-price="280" data-sizes="XS,S,M,L,XL">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#d0c8b8,#a89880);"></div>
+                <span class="product-card-badge badge-sale">−15%</span>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Trousers</div>
+                <div class="product-card-name"><a href="product.html">Wide Leg Trousers</a></div>
+                <div class="product-card-price">
+                  <span class="price-current price-sale">€ 280</span>
+                  <span class="price-original">€ 340</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Cashmere Knit Set" data-category="knitwear" data-price="420" data-sizes="XS,S,M,L">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#e0d8c8,#c0b0a0);"></div>
+                <span class="product-card-badge badge-bestseller">Bestseller</span>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Knitwear</div>
+                <div class="product-card-name"><a href="product.html">Cashmere Knit Set</a></div>
+                <div class="product-card-price"><span class="price-current">€ 420</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Silk Blouse" data-category="shirts" data-price="221" data-sizes="XS,S,M,L,XL">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#c8b8a0,#908070);"></div>
+                <span class="product-card-badge badge-sale">−15%</span>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Shirts</div>
+                <div class="product-card-name"><a href="product.html">Silk Blouse</a></div>
+                <div class="product-card-price">
+                  <span class="price-current price-sale">€ 221</span>
+                  <span class="price-original">€ 260</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Minimalist Loafers" data-category="footwear" data-price="340" data-sizes="36,37,38,39,40,41">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#b8a898,#706050);"></div>
+                <span class="product-card-badge badge-bestseller">Bestseller</span>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Footwear</div>
+                <div class="product-card-name"><a href="product.html">Minimalist Loafers</a></div>
+                <div class="product-card-price"><span class="price-current">€ 340</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 9 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Merino Turtleneck" data-category="knitwear" data-price="195" data-sizes="XS,S,M,L,XL">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#c8c0b0,#908880);"></div>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Knitwear</div>
+                <div class="product-card-name"><a href="product.html">Merino Turtleneck</a></div>
+                <div class="product-card-price"><span class="price-current">€ 195</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 10 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Trench Coat" data-category="outerwear" data-price="620" data-sizes="XS,S,M,L">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#c8b890,#9a8860);"></div>
+                <span class="product-card-badge badge-new">New</span>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Outerwear</div>
+                <div class="product-card-name"><a href="product.html">Classic Trench Coat</a></div>
+                <div class="product-card-price"><span class="price-current">€ 620</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 11 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Wrap Midi Dress" data-category="dresses" data-price="275" data-sizes="XS,S,M,L,XL">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#6B2737,#3a1520);"></div>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Dresses</div>
+                <div class="product-card-name"><a href="product.html">Wrap Midi Dress</a></div>
+                <div class="product-card-price"><span class="price-current">€ 275</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 12 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Tailored Suit Trousers" data-category="tailoring" data-price="310" data-sizes="XS,S,M,L">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#5C6247,#2a2c20);"></div>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Tailoring</div>
+                <div class="product-card-name"><a href="product.html">Tailored Suit Trousers</a></div>
+                <div class="product-card-price"><span class="price-current">€ 310</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 13 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Suede Mini Bag" data-category="accessories" data-price="290" data-sizes="OS">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#c0a888,#8a7050);"></div>
+                <span class="product-card-badge badge-new">New</span>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Accessories</div>
+                <div class="product-card-name"><a href="product.html">Suede Mini Bag</a></div>
+                <div class="product-card-price"><span class="price-current">€ 290</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 14 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Linen Wide Trousers" data-category="trousers" data-price="185" data-sizes="XS,S,M,L,XL">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#e8e0d0,#c8c0b0);"></div>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Trousers</div>
+                <div class="product-card-name"><a href="product.html">Linen Wide Trousers</a></div>
+                <div class="product-card-price"><span class="price-current">€ 185</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 15 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Poplin Shirt" data-category="shirts" data-price="165" data-sizes="XS,S,M,L,XL">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#f0ece4,#d8d0c0);"></div>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Shirts</div>
+                <div class="product-card-name"><a href="product.html">Poplin Oversized Shirt</a></div>
+                <div class="product-card-price"><span class="price-current">€ 165</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 16 -->
+          <div class="col-lg-4 col-md-6 product-item-filterable"
+               data-name="Block Heel Mules" data-category="footwear" data-price="295" data-sizes="36,37,38,39,40">
+            <div class="product-card">
+              <div class="product-card-image-wrap">
+                <div style="width:100%;height:100%;background:linear-gradient(160deg,#d0b898,#a08060);"></div>
+                <div class="product-card-actions">
+                  <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+                  <a href="product.html" class="btn-icon"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-card-body">
+                <div class="product-card-category">Footwear</div>
+                <div class="product-card-name"><a href="product.html">Block Heel Mules</a></div>
+                <div class="product-card-price"><span class="price-current">€ 295</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /row -->
+
+        <!-- PAGINATION -->
+        <div class="velora-pagination">
+          <button class="page-btn prev-btn"><i class="bi bi-chevron-left"></i></button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <span style="color:var(--sand);padding:0 4px;">…</span>
+          <button class="page-btn">8</button>
+          <button class="page-btn next-btn"><i class="bi bi-chevron-right"></i></button>
+        </div>
+
+      </div><!-- /col -->
+    </div><!-- /row -->
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-inner fade-up">
+      <div class="section-eyebrow">Stay Connected</div>
+      <h2 class="section-title" style="font-size:36px;">Join the <em>VELORA</em> Circle</h2>
+      <form class="newsletter-form newsletter-form-js" novalidate>
+        <input type="email" placeholder="Your email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-micro"><i class="bi bi-lock-fill me-1"></i> We respect your privacy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="velora-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6">
+        <span class="footer-logo">VELORA</span>
+        <p class="footer-tagline">A premium fashion boutique crafting timeless wardrobes for the modern woman.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-pinterest"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="catalog.html">New Arrivals</a></li>
+          <li><a href="catalog.html">Collections</a></li>
+          <li><a href="catalog.html">Sale</a></li>
+          <li><a href="stylist.html">Stylist</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-heading">Newsletter</div>
+        <form class="footer-newsletter-input newsletter-form-js" novalidate>
+          <input type="email" placeholder="Email address" required />
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 VELORA. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+  // Price range display
+  const pr = document.getElementById('priceRange');
+  const prv = document.getElementById('priceRangeVal');
+  if (pr && prv) {
+    pr.addEventListener('input', () => { prv.textContent = '€ ' + pr.value; });
+  }
+</script>
+</body>
+</html>
