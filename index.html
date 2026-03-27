@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VELORA — Premium Fashion</title>
+  <meta name="description" content="VELORA — luxury fashion boutique. Discover curated collections of premium ready-to-wear clothing, accessories, and editorial looks." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- =========================================
+     TOP BAR
+     ========================================= -->
+<div class="navbar-top-bar">
+  Free worldwide shipping on orders over €200 &nbsp;|&nbsp; <a href="#">Explore New Season →</a>
+</div>
+
+<!-- =========================================
+     HEADER / NAVBAR
+     ========================================= -->
+<nav class="velora-navbar">
+  <div class="container">
+    <div class="navbar-main">
+      <!-- Logo -->
+      <a href="index.html" class="velora-logo">VEL<span>O</span>RA</a>
+
+      <!-- Nav Links -->
+      <ul class="navbar-nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="catalog.html">Collections</a></li>
+        <li><a href="catalog.html">New Arrivals</a></li>
+        <li><a href="catalog.html">Sale</a></li>
+        <li><a href="stylist.html">Stylist</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="navbar-actions">
+        <form class="navbar-search-form">
+          <input type="text" placeholder="Search..." />
+          <button type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <button class="navbar-icon-btn" aria-label="Wishlist"><i class="bi bi-heart"></i></button>
+        <button class="navbar-icon-btn" aria-label="Account"><i class="bi bi-person"></i></button>
+        <button class="navbar-icon-btn" aria-label="Cart" style="position:relative;">
+          <i class="bi bi-bag"></i>
+          <span class="cart-badge">2</span>
+        </button>
+        <button class="navbar-mobile-toggle" id="mobileMenuToggle" aria-label="Menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Collections</a></li>
+        <li><a href="catalog.html">New Arrivals</a></li>
+        <li><a href="catalog.html">Sale</a></li>
+        <li><a href="stylist.html">Personal Stylist</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- =========================================
+     HERO SECTION
+     ========================================= -->
+<section class="hero-section">
+  <!-- Background gradient composition (CSS-only, no external img required) -->
+  <div class="hero-overlay"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,#d9cfc2 0%,#ede8df 35%,#c4b8a8 65%,#a89880 100%);opacity:0.6;"></div>
+  <!-- Decorative geometric shapes -->
+  <div style="position:absolute;right:-80px;top:10%;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(107,39,55,0.12),transparent 70%);pointer-events:none;"></div>
+  <div style="position:absolute;left:55%;bottom:5%;width:260px;height:1px;background:var(--beige);transform:rotate(-30deg);opacity:0.5;pointer-events:none;"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">New Season 2025</div>
+      <h1 class="hero-title">
+        Dress<br/>
+        for the<br/>
+        <em>Extraordinary</em>
+      </h1>
+      <p class="hero-subtitle">
+        Curated luxury fashion for those who understand that style is not what you wear —
+        it is how you choose to be seen.
+      </p>
+      <div class="hero-actions">
+        <a href="catalog.html" class="btn-velora btn-primary-velora">Explore Collection</a>
+        <a href="stylist.html" class="btn-velora btn-ghost">
+          Book a Stylist <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="hero-scroll-hint">
+    <span class="scroll-line"></span>
+    Scroll
+  </div>
+</section>
+
+<!-- =========================================
+     TICKER / BESTSELLER STRIP
+     ========================================= -->
+<div class="bestseller-strip">
+  <div class="ticker-wrap">
+    <!-- Repeated for infinite loop effect -->
+    <span class="ticker-item">New Season <span class="dot"></span></span>
+    <span class="ticker-item">Cashmere Knits <span class="dot"></span></span>
+    <span class="ticker-item">Editorial Looks <span class="dot"></span></span>
+    <span class="ticker-item">Oversized Coats <span class="dot"></span></span>
+    <span class="ticker-item">Satin Dresses <span class="dot"></span></span>
+    <span class="ticker-item">Free Shipping Over €200 <span class="dot"></span></span>
+    <span class="ticker-item">Leather Bags <span class="dot"></span></span>
+    <span class="ticker-item">Minimal Loafers <span class="dot"></span></span>
+    <span class="ticker-item">Wide Leg Trousers <span class="dot"></span></span>
+    <!-- Duplicate -->
+    <span class="ticker-item">New Season <span class="dot"></span></span>
+    <span class="ticker-item">Cashmere Knits <span class="dot"></span></span>
+    <span class="ticker-item">Editorial Looks <span class="dot"></span></span>
+    <span class="ticker-item">Oversized Coats <span class="dot"></span></span>
+    <span class="ticker-item">Satin Dresses <span class="dot"></span></span>
+    <span class="ticker-item">Free Shipping Over €200 <span class="dot"></span></span>
+    <span class="ticker-item">Leather Bags <span class="dot"></span></span>
+    <span class="ticker-item">Minimal Loafers <span class="dot"></span></span>
+    <span class="ticker-item">Wide Leg Trousers <span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- =========================================
+     FEATURED CATEGORIES
+     ========================================= -->
+<section class="section-pad bg-ivory">
+  <div class="container">
+    <div class="section-heading fade-up">
+      <div class="section-eyebrow">Shop by Category</div>
+      <h2 class="section-title">The <em>Collections</em></h2>
+      <p class="section-subtitle">Each category tells a story — from sleek tailoring to effortlessly draped silhouettes.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-1">
+        <a href="catalog.html" class="category-card d-block">
+          <div style="width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,#d4c8bb,#b8a898);position:relative;overflow:hidden;">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:52px;color:rgba(255,255,255,0.18);letter-spacing:-0.03em;">Coats</div>
+          </div>
+          <div class="category-card-overlay">
+            <div class="category-card-label">Outerwear</div>
+            <div class="category-card-title">Coats &amp; Jackets</div>
+            <div class="category-card-cta">Shop Now <i class="bi bi-arrow-right"></i></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-2">
+        <a href="catalog.html" class="category-card d-block">
+          <div style="width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,#c8b8aa,#a89070);position:relative;overflow:hidden;">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:52px;color:rgba(255,255,255,0.18);letter-spacing:-0.03em;">Dress</div>
+          </div>
+          <div class="category-card-overlay">
+            <div class="category-card-label">Evening & Day</div>
+            <div class="category-card-title">Dresses</div>
+            <div class="category-card-cta">Shop Now <i class="bi bi-arrow-right"></i></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-3">
+        <a href="catalog.html" class="category-card d-block">
+          <div style="width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,#b0a898,#887868);position:relative;overflow:hidden;">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:52px;color:rgba(255,255,255,0.18);letter-spacing:-0.03em;">Knits</div>
+          </div>
+          <div class="category-card-overlay">
+            <div class="category-card-label">Knitwear</div>
+            <div class="category-card-title">Sweaters &amp; Knits</div>
+            <div class="category-card-cta">Shop Now <i class="bi bi-arrow-right"></i></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-4">
+        <a href="catalog.html" class="category-card d-block">
+          <div style="width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,#c0b0a0,#988070);position:relative;overflow:hidden;">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:52px;color:rgba(255,255,255,0.18);letter-spacing:-0.03em;">Bags</div>
+          </div>
+          <div class="category-card-overlay">
+            <div class="category-card-label">Accessories</div>
+            <div class="category-card-title">Bags &amp; Leather</div>
+            <div class="category-card-cta">Shop Now <i class="bi bi-arrow-right"></i></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     EDITORIAL GRID
+     ========================================= -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="container">
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 fade-up">
+        <div class="section-heading-left mb-0">
+          <div class="section-eyebrow">The Edit</div>
+          <h2 class="section-title">Fashion<br/><em>Conversations</em></h2>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-md-end fade-up fade-up-delay-2">
+        <a href="catalog.html" class="btn-velora btn-outline-velora">View All Looks</a>
+      </div>
+    </div>
+
+    <div class="editorial-grid fade-up">
+      <!-- Featured -->
+      <div class="editorial-item editorial-item-featured" style="min-height:520px;">
+        <div style="width:100%;height:100%;background:linear-gradient(160deg,#c4b4a4 0%,#8a7868 100%);min-height:520px;"></div>
+        <div class="editorial-item-overlay">
+          <div class="editorial-item-tag">Cover Story</div>
+          <div class="editorial-item-title">The New<br/>Feminine Power</div>
+        </div>
+      </div>
+      <!-- Col 2 -->
+      <div class="editorial-item" style="min-height:250px;">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#b8a898,#d4c8b8);min-height:250px;"></div>
+        <div class="editorial-item-overlay">
+          <div class="editorial-item-tag">Trend</div>
+          <div class="editorial-item-title">Monochrome Moments</div>
+        </div>
+      </div>
+      <div class="editorial-item" style="min-height:250px;">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#6B2737,#8B3A4D);min-height:250px;"></div>
+        <div class="editorial-item-overlay">
+          <div class="editorial-item-tag">Colour Story</div>
+          <div class="editorial-item-title">Burgundy Season</div>
+        </div>
+      </div>
+      <div class="editorial-item" style="min-height:250px;">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#5C6247,#7a8060);min-height:250px;"></div>
+        <div class="editorial-item-overlay">
+          <div class="editorial-item-tag">Wardrobe</div>
+          <div class="editorial-item-title">Into the Olive</div>
+        </div>
+      </div>
+      <div class="editorial-item" style="min-height:250px;">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#2C2C2C,#4a4a4a);min-height:250px;"></div>
+        <div class="editorial-item-overlay">
+          <div class="editorial-item-tag">Evening</div>
+          <div class="editorial-item-title">After Dark</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     NEW ARRIVALS
+     ========================================= -->
+<section class="section-pad bg-ivory">
+  <div class="container">
+    <div class="section-heading fade-up">
+      <div class="section-eyebrow">Just In</div>
+      <h2 class="section-title">New <em>Arrivals</em></h2>
+    </div>
+    <div class="row g-4" id="newArrivalsGrid">
+
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-1">
+        <div class="product-card">
+          <div class="product-card-image-wrap">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg,#d9cfc2,#b8a898);"></div>
+            <span class="product-card-badge badge-new">New</span>
+            <div class="product-card-actions">
+              <button class="btn-icon wishlist-btn" title="Wishlist"><i class="bi bi-heart"></i></button>
+              <button class="btn-icon" title="Quick View"><i class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-category">Outerwear</div>
+            <div class="product-card-name"><a href="product.html">Oversized Wool Coat</a></div>
+            <div class="product-card-price">
+              <span class="price-current">€ 490</span>
+            </div>
+            <div class="product-card-colors">
+              <span class="color-swatch active" style="background:#C4B8A8;" title="Camel"></span>
+              <span class="color-swatch" style="background:#2C2C2C;" title="Black"></span>
+              <span class="color-swatch" style="background:#6B2737;" title="Burgundy"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-2">
+        <div class="product-card">
+          <div class="product-card-image-wrap">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg,#c4b0a0,#a09080);"></div>
+            <span class="product-card-badge badge-new">New</span>
+            <div class="product-card-actions">
+              <button class="btn-icon wishlist-btn" title="Wishlist"><i class="bi bi-heart"></i></button>
+              <button class="btn-icon" title="Quick View"><i class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-category">Dresses</div>
+            <div class="product-card-name"><a href="product.html">Satin Slip Dress</a></div>
+            <div class="product-card-price">
+              <span class="price-current">€ 320</span>
+            </div>
+            <div class="product-card-colors">
+              <span class="color-swatch active" style="background:#c8b8a8;" title="Sand"></span>
+              <span class="color-swatch" style="background:#1A1A1A;" title="Black"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-3">
+        <div class="product-card">
+          <div class="product-card-image-wrap">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg,#b8b0a0,#908878);"></div>
+            <div class="product-card-actions">
+              <button class="btn-icon wishlist-btn" title="Wishlist"><i class="bi bi-heart"></i></button>
+              <button class="btn-icon" title="Quick View"><i class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-category">Tailoring</div>
+            <div class="product-card-name"><a href="product.html">Structured Blazer</a></div>
+            <div class="product-card-price">
+              <span class="price-current">€ 380</span>
+            </div>
+            <div class="product-card-colors">
+              <span class="color-swatch active" style="background:#908878;" title="Taupe"></span>
+              <span class="color-swatch" style="background:#5C6247;" title="Olive"></span>
+              <span class="color-swatch" style="background:#2C2C2C;" title="Charcoal"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-4">
+        <div class="product-card">
+          <div class="product-card-image-wrap">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg,#a89880,#887860);"></div>
+            <span class="product-card-badge badge-new">New</span>
+            <div class="product-card-actions">
+              <button class="btn-icon wishlist-btn" title="Wishlist"><i class="bi bi-heart"></i></button>
+              <button class="btn-icon" title="Quick View"><i class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-category">Accessories</div>
+            <div class="product-card-name"><a href="product.html">Leather Structured Bag</a></div>
+            <div class="product-card-price">
+              <span class="price-current">€ 560</span>
+            </div>
+            <div class="product-card-colors">
+              <span class="color-swatch active" style="background:#887860;" title="Cognac"></span>
+              <span class="color-swatch" style="background:#1A1A1A;" title="Black"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center mt-5 fade-up">
+      <a href="catalog.html" class="btn-velora btn-outline-velora">View All New Arrivals</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     TRENDING LOOKS
+     ========================================= -->
+<section class="section-pad" style="background:var(--cream);">
+  <div class="container">
+    <div class="section-heading fade-up">
+      <div class="section-eyebrow">Trending Now</div>
+      <h2 class="section-title">The Season's <em>Looks</em></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 fade-up fade-up-delay-1">
+        <div class="trend-card">
+          <div style="width:100%;aspect-ratio:2/3;background:linear-gradient(160deg,#c4b0a0 0%,#7a6858 100%);"></div>
+          <div class="trend-number">01</div>
+          <div class="trend-card-info">
+            <div class="trend-tag">Editorial</div>
+            <div class="trend-title">The Power Coat</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up fade-up-delay-2">
+        <div class="trend-card">
+          <div style="width:100%;aspect-ratio:2/3;background:linear-gradient(160deg,#6B2737 0%,#2C1820 100%);"></div>
+          <div class="trend-number">02</div>
+          <div class="trend-card-info">
+            <div class="trend-tag">Colour</div>
+            <div class="trend-title">Deep Burgundy</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up fade-up-delay-3">
+        <div class="trend-card">
+          <div style="width:100%;aspect-ratio:2/3;background:linear-gradient(160deg,#5C6247 0%,#2a2c1e 100%);"></div>
+          <div class="trend-number">03</div>
+          <div class="trend-card-info">
+            <div class="trend-tag">Texture</div>
+            <div class="trend-title">Earthy Knits</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     BESTSELLERS
+     ========================================= -->
+<section class="section-pad bg-ivory">
+  <div class="container">
+    <div class="section-heading fade-up">
+      <div class="section-eyebrow">Most Loved</div>
+      <h2 class="section-title"><em>Bestsellers</em></h2>
+    </div>
+    <div class="row g-4">
+
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-1">
+        <div class="product-card">
+          <div class="product-card-image-wrap">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg,#e0d8c8,#c0b0a0);"></div>
+            <span class="product-card-badge badge-bestseller">Bestseller</span>
+            <div class="product-card-actions">
+              <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+              <button class="btn-icon"><i class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-category">Knitwear</div>
+            <div class="product-card-name"><a href="product.html">Cashmere Knit Set</a></div>
+            <div class="product-card-price">
+              <span class="price-current">€ 420</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-2">
+        <div class="product-card">
+          <div class="product-card-image-wrap">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg,#d0c8b8,#a89880);"></div>
+            <span class="product-card-badge badge-bestseller">Bestseller</span>
+            <div class="product-card-actions">
+              <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+              <button class="btn-icon"><i class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-category">Trousers</div>
+            <div class="product-card-name"><a href="product.html">Wide Leg Trousers</a></div>
+            <div class="product-card-price">
+              <span class="price-current">€ 280</span>
+              <span class="price-original">€ 340</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-3">
+        <div class="product-card">
+          <div class="product-card-image-wrap">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg,#c8b8a0,#908070);"></div>
+            <span class="product-card-badge badge-sale">−15%</span>
+            <div class="product-card-actions">
+              <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+              <button class="btn-icon"><i class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-category">Shirts</div>
+            <div class="product-card-name"><a href="product.html">Silk Blouse</a></div>
+            <div class="product-card-price">
+              <span class="price-current price-sale">€ 221</span>
+              <span class="price-original">€ 260</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 fade-up fade-up-delay-4">
+        <div class="product-card">
+          <div class="product-card-image-wrap">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg,#b8a898,#706050);"></div>
+            <span class="product-card-badge badge-bestseller">Bestseller</span>
+            <div class="product-card-actions">
+              <button class="btn-icon wishlist-btn"><i class="bi bi-heart"></i></button>
+              <button class="btn-icon"><i class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-category">Footwear</div>
+            <div class="product-card-name"><a href="product.html">Minimalist Loafers</a></div>
+            <div class="product-card-price">
+              <span class="price-current">€ 340</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     SEASONAL BANNER
+     ========================================= -->
+<section class="seasonal-banner">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,#2C2C2C 0%,#6B2737 100%);opacity:0.95;"></div>
+  <div class="seasonal-banner-season">AW25</div>
+  <div class="container">
+    <div class="seasonal-banner-content">
+      <div class="hero-eyebrow" style="color:var(--sand);">Autumn / Winter 2025</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(40px,6vw,72px);color:#fff;font-weight:400;line-height:1.1;margin-bottom:24px;">
+        The Art of<br/><em style="color:var(--sand);">Layering</em>
+      </h2>
+      <p style="color:var(--sand);font-size:14px;line-height:1.85;max-width:420px;margin-bottom:36px;">
+        Discover the new season collection — where warmth meets elegance and every outfit tells a story of quiet luxury.
+      </p>
+      <a href="catalog.html" class="btn-velora btn-outline-light">Shop the Collection</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     NEWSLETTER
+     ========================================= -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-inner fade-up">
+      <div class="section-eyebrow">Stay Connected</div>
+      <h2 class="section-title" style="font-size:36px;">Join the <em>VELORA</em> Circle</h2>
+      <p style="font-size:14px;color:var(--warm-gray);line-height:1.85;">
+        Be the first to receive new collections, exclusive offers, and style inspiration directly from our editors.
+      </p>
+      <form class="newsletter-form newsletter-form-js" novalidate>
+        <input type="email" placeholder="Your email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-micro">
+        <i class="bi bi-lock-fill me-1"></i>
+        We respect your privacy. Unsubscribe at any time.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+<footer class="velora-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6">
+        <span class="footer-logo">VELORA</span>
+        <p class="footer-tagline">
+          A premium fashion boutique crafting timeless wardrobes for the modern woman. Quality, elegance, and sustainability in every piece.
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="catalog.html">New Arrivals</a></li>
+          <li><a href="catalog.html">Collections</a></li>
+          <li><a href="catalog.html">Outerwear</a></li>
+          <li><a href="catalog.html">Dresses</a></li>
+          <li><a href="catalog.html">Knitwear</a></li>
+          <li><a href="catalog.html">Accessories</a></li>
+          <li><a href="catalog.html">Sale</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="stylist.html">Personal Stylist</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-heading">Newsletter</div>
+        <p style="font-size:13px;color:var(--sand);line-height:1.7;margin-bottom:4px;">
+          Subscribe for exclusive access to new drops and style stories.
+        </p>
+        <form class="footer-newsletter-input newsletter-form-js" novalidate>
+          <input type="email" placeholder="Email address" required />
+          <button type="submit">Join</button>
+        </form>
+        <div style="margin-top:24px;">
+          <div class="footer-heading">We Accept</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;">
+            <span style="background:rgba(255,255,255,0.07);padding:5px 12px;border-radius:4px;font-size:11px;color:var(--sand);letter-spacing:0.05em;">Visa</span>
+            <span style="background:rgba(255,255,255,0.07);padding:5px 12px;border-radius:4px;font-size:11px;color:var(--sand);letter-spacing:0.05em;">Mastercard</span>
+            <span style="background:rgba(255,255,255,0.07);padding:5px 12px;border-radius:4px;font-size:11px;color:var(--sand);letter-spacing:0.05em;">PayPal</span>
+            <span style="background:rgba(255,255,255,0.07);padding:5px 12px;border-radius:4px;font-size:11px;color:var(--sand);letter-spacing:0.05em;">Apple Pay</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 VELORA. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Stylist — VELORA</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="navbar-top-bar">
+  Personal styling sessions available every day — <a href="#">Book Your Appointment →</a>
+</div>
+
+<!-- NAVBAR -->
+<nav class="velora-navbar">
+  <div class="container">
+    <div class="navbar-main">
+      <a href="index.html" class="velora-logo">VEL<span>O</span>RA</a>
+      <ul class="navbar-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Collections</a></li>
+        <li><a href="catalog.html">New Arrivals</a></li>
+        <li><a href="catalog.html">Sale</a></li>
+        <li><a href="stylist.html" class="active">Stylist</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <form class="navbar-search-form">
+          <input type="text" placeholder="Search..." />
+          <button type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <button class="navbar-icon-btn"><i class="bi bi-heart"></i></button>
+        <button class="navbar-icon-btn"><i class="bi bi-person"></i></button>
+        <button class="navbar-icon-btn" style="position:relative;"><i class="bi bi-bag"></i><span class="cart-badge">2</span></button>
+        <button class="navbar-mobile-toggle" id="mobileMenuToggle"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Collections</a></li>
+        <li><a href="stylist.html">Personal Stylist</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- FORM HERO -->
+<div class="form-hero">
+  <div class="container">
+    <div class="form-hero-inner">
+      <div class="form-hero-content">
+        <div class="velora-breadcrumb mb-4">
+          <a href="index.html">Home</a>
+          <span class="sep"><i class="bi bi-chevron-right" style="font-size:9px;"></i></span>
+          <span class="current">Personal Stylist</span>
+        </div>
+        <div class="hero-eyebrow" style="justify-content:flex-start;">Exclusive Service</div>
+        <h1 style="font-family:var(--font-display);font-size:clamp(40px,6vw,72px);font-weight:400;line-height:1.08;color:var(--deep-black);margin-bottom:20px;">
+          Your Personal<br/><em style="color:var(--burgundy);">Stylist</em>
+        </h1>
+        <p style="font-size:14px;color:var(--warm-gray);line-height:1.9;max-width:460px;">
+          Let our expert stylists curate a wardrobe that speaks your language. From capsule wardrobes to event dressing — we handle every detail, personally.
+        </p>
+      </div>
+      <div class="form-hero-image d-none d-md-block">
+        <div style="width:100%;max-height:380px;min-height:280px;background:linear-gradient(160deg,#c4b8a8 0%,#7a6858 100%);border-radius:16px 16px 0 0;position:relative;overflow:hidden;">
+          <div style="position:absolute;bottom:30px;left:30px;right:30px;background:rgba(248,245,240,0.9);border-radius:8px;padding:18px;backdrop-filter:blur(4px);">
+            <div style="font-family:var(--font-display);font-size:20px;color:var(--deep-black);margin-bottom:4px;">One-to-One Service</div>
+            <div style="font-size:12px;color:var(--warm-gray);">Dedicated stylist · 60-min consultation · Curated selection</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN FORM SECTION -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- FORM -->
+      <div class="col-lg-7">
+        <div class="section-heading-left mb-5 fade-up">
+          <div class="section-eyebrow">Request a Session</div>
+          <h2 class="section-title" style="font-size:40px;">Tell Us About<br/><em>Your Style</em></h2>
+          <p class="section-subtitle" style="text-align:left;margin:0;max-width:none;">
+            Fill in the form below and one of our stylists will reach out within 24 hours to schedule your personal session.
+          </p>
+        </div>
+
+        <form id="stylistForm" novalidate class="fade-up fade-up-delay-1">
+          <div class="row g-4">
+
+            <!-- Name -->
+            <div class="col-md-6">
+              <label class="styled-form-label" for="formName">Full Name *</label>
+              <input type="text" class="styled-form-control" id="formName" placeholder="Your name" required />
+              <div class="invalid-feedback" style="display:none;font-size:11px;color:var(--burgundy);margin-top:6px;">Please enter your name.</div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+              <label class="styled-form-label" for="formEmail">Email Address *</label>
+              <input type="email" class="styled-form-control" id="formEmail" placeholder="you@email.com" required />
+              <div class="invalid-feedback" style="display:none;font-size:11px;color:var(--burgundy);margin-top:6px;">Please enter a valid email address.</div>
+            </div>
+
+            <!-- Phone -->
+            <div class="col-md-6">
+              <label class="styled-form-label" for="formPhone">Phone Number *</label>
+              <input type="tel" class="styled-form-control" id="formPhone" placeholder="+49 123 456 7890" required />
+              <div class="invalid-feedback" style="display:none;font-size:11px;color:var(--burgundy);margin-top:6px;">Please enter a valid phone number.</div>
+            </div>
+
+            <!-- Style Preference -->
+            <div class="col-md-6">
+              <label class="styled-form-label" for="formStyle">Style Aesthetic *</label>
+              <select class="styled-form-control" id="formStyle" required>
+                <option value="">Select your aesthetic</option>
+                <option value="minimal">Minimal & Clean</option>
+                <option value="editorial">Editorial & Bold</option>
+                <option value="classic">Classic & Timeless</option>
+                <option value="casual-luxe">Casual Luxe</option>
+                <option value="feminine">Feminine & Romantic</option>
+                <option value="androgynous">Androgynous & Structured</option>
+                <option value="eclectic">Eclectic & Expressive</option>
+              </select>
+              <div class="invalid-feedback" style="display:none;font-size:11px;color:var(--burgundy);margin-top:6px;">Please select a style preference.</div>
+            </div>
+
+            <!-- Size -->
+            <div class="col-md-6">
+              <label class="styled-form-label" for="formSize">Your Size *</label>
+              <input type="text" class="styled-form-control" id="formSize" placeholder="e.g. EU 36 / S" required />
+              <div class="invalid-feedback" style="display:none;font-size:11px;color:var(--burgundy);margin-top:6px;">Please enter your size.</div>
+            </div>
+
+            <!-- Budget -->
+            <div class="col-md-6">
+              <label class="styled-form-label" for="formBudget">Session Budget *</label>
+              <select class="styled-form-control" id="formBudget" required>
+                <option value="">Select budget range</option>
+                <option value="500-1000">€ 500 – 1,000</option>
+                <option value="1000-2500">€ 1,000 – 2,500</option>
+                <option value="2500-5000">€ 2,500 – 5,000</option>
+                <option value="5000+">€ 5,000+</option>
+              </select>
+              <div class="invalid-feedback" style="display:none;font-size:11px;color:var(--burgundy);margin-top:6px;">Please select a budget.</div>
+            </div>
+
+            <!-- Favourite Categories -->
+            <div class="col-12">
+              <label class="styled-form-label">Favourite Categories (select all that apply)</label>
+              <div class="row g-2 mt-1">
+                <div class="col-6 col-md-4">
+                  <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;color:var(--warm-gray);">
+                    <input type="checkbox" name="categories" value="outerwear" class="filter-checkbox" /> Coats & Outerwear
+                  </label>
+                </div>
+                <div class="col-6 col-md-4">
+                  <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;color:var(--warm-gray);">
+                    <input type="checkbox" name="categories" value="dresses" class="filter-checkbox" /> Dresses
+                  </label>
+                </div>
+                <div class="col-6 col-md-4">
+                  <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;color:var(--warm-gray);">
+                    <input type="checkbox" name="categories" value="knitwear" class="filter-checkbox" /> Knitwear
+                  </label>
+                </div>
+                <div class="col-6 col-md-4">
+                  <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;color:var(--warm-gray);">
+                    <input type="checkbox" name="categories" value="tailoring" class="filter-checkbox" /> Tailoring
+                  </label>
+                </div>
+                <div class="col-6 col-md-4">
+                  <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;color:var(--warm-gray);">
+                    <input type="checkbox" name="categories" value="accessories" class="filter-checkbox" /> Accessories
+                  </label>
+                </div>
+                <div class="col-6 col-md-4">
+                  <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;color:var(--warm-gray);">
+                    <input type="checkbox" name="categories" value="footwear" class="filter-checkbox" /> Footwear
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="col-12">
+              <label class="styled-form-label" for="formMessage">Additional Notes</label>
+              <textarea class="styled-form-control" id="formMessage" placeholder="Tell us about upcoming events, travel plans, your lifestyle, or anything that helps us understand your vision..." rows="5"></textarea>
+            </div>
+
+            <!-- Privacy notice -->
+            <div class="col-12">
+              <p style="font-size:11px;color:var(--taupe);line-height:1.7;margin:0;">
+                <i class="bi bi-lock-fill me-1"></i>
+                Your information is 100% confidential and will only be used by your dedicated VELORA stylist to prepare your personalised session. We never share data with third parties.
+              </p>
+            </div>
+
+            <!-- Submit -->
+            <div class="col-12">
+              <button type="submit" class="btn-velora btn-primary-velora" style="width:100%;padding:18px;font-size:12px;">
+                <i class="bi bi-envelope me-2"></i>Submit Request
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <!-- TRUST SIDEBAR -->
+      <div class="col-lg-5 fade-up fade-up-delay-2">
+
+        <!-- How it works -->
+        <div style="background:var(--cream);border-radius:var(--radius-lg);padding:36px;margin-bottom:28px;">
+          <div style="font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--burgundy);margin-bottom:18px;">How It Works</div>
+          <div style="display:flex;flex-direction:column;gap:0;">
+            <div style="display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--beige);">
+              <div style="width:32px;height:32px;background:var(--deep-black);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;color:#fff;flex-shrink:0;">1</div>
+              <div>
+                <div style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--charcoal);margin-bottom:4px;">Submit Your Request</div>
+                <p style="font-size:12px;color:var(--warm-gray);line-height:1.65;margin:0;">Fill in the form with your style preferences and requirements.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--beige);">
+              <div style="width:32px;height:32px;background:var(--burgundy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;color:#fff;flex-shrink:0;">2</div>
+              <div>
+                <div style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--charcoal);margin-bottom:4px;">Meet Your Stylist</div>
+                <p style="font-size:12px;color:var(--warm-gray);line-height:1.65;margin:0;">We'll match you with a dedicated stylist within 24 hours and schedule a consultation.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:18px;padding:18px 0;">
+              <div style="width:32px;height:32px;background:var(--olive);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;color:#fff;flex-shrink:0;">3</div>
+              <div>
+                <div style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--charcoal);margin-bottom:4px;">Receive Your Edit</div>
+                <p style="font-size:12px;color:var(--warm-gray);line-height:1.65;margin:0;">Your stylist curates a personalised selection delivered to your home. Keep what you love.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust items -->
+        <div>
+          <div class="form-trust-item">
+            <div class="form-trust-icon"><i class="bi bi-person-check"></i></div>
+            <div>
+              <div class="form-trust-title">Dedicated Stylist</div>
+              <p class="form-trust-text">Your own personal stylist who learns your taste, lifestyle, and goals over time.</p>
+            </div>
+          </div>
+          <div class="form-trust-item">
+            <div class="form-trust-icon"><i class="bi bi-shield-lock"></i></div>
+            <div>
+              <div class="form-trust-title">Complete Privacy</div>
+              <p class="form-trust-text">All conversations are strictly confidential. We never share your information.</p>
+            </div>
+          </div>
+          <div class="form-trust-item">
+            <div class="form-trust-icon"><i class="bi bi-stars"></i></div>
+            <div>
+              <div class="form-trust-title">Premium Experience</div>
+              <p class="form-trust-text">White-glove service from consultation to doorstep delivery. No commitment required.</p>
+            </div>
+          </div>
+          <div class="form-trust-item" style="border-bottom:none;">
+            <div class="form-trust-icon"><i class="bi bi-arrow-return-left"></i></div>
+            <div>
+              <div class="form-trust-title">Flexible Returns</div>
+              <p class="form-trust-text">Only pay for what you keep. Everything else is returned at no cost to you.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div style="background:var(--deep-black);border-radius:var(--radius-lg);padding:32px;margin-top:28px;">
+          <div style="color:#C9A84C;font-size:14px;margin-bottom:14px;">★★★★★</div>
+          <p style="font-family:var(--font-display);font-size:20px;color:var(--ivory);font-style:italic;line-height:1.5;margin-bottom:16px;">
+            "My stylist understood my aesthetic immediately. The curation was perfect — every piece felt like it was made for my wardrobe."
+          </p>
+          <div style="font-size:11px;color:var(--sand);letter-spacing:0.1em;text-transform:uppercase;">— Isabella K., Berlin</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS MODAL -->
+<div class="modal fade velora-modal" id="successModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-body text-center" style="padding:40px 32px;">
+        <div class="modal-success-icon"><i class="bi bi-check-lg"></i></div>
+        <h5 class="modal-title mb-3">Request Received</h5>
+        <p style="font-size:13px;color:var(--warm-gray);line-height:1.8;">
+          Thank you for reaching out. Your dedicated stylist will contact you within 24 hours to schedule your personal session.
+        </p>
+        <button type="button" class="btn-velora btn-primary-velora mt-3 w-100" data-bs-dismiss="modal" style="font-size:10px;padding:13px;">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ERROR MODAL -->
+<div class="modal fade velora-modal" id="errorModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-body text-center" style="padding:40px 32px;">
+        <div class="modal-success-icon" style="background:#fef0f3;"><i class="bi bi-exclamation-triangle" style="color:var(--burgundy);"></i></div>
+        <h5 class="modal-title mb-3">Please Check Your Details</h5>
+        <p style="font-size:13px;color:var(--warm-gray);line-height:1.8;">
+          Some required fields are missing or contain invalid information. Please review the highlighted fields and try again.
+        </p>
+        <button type="button" class="btn-velora btn-outline-velora mt-3 w-100" data-bs-dismiss="modal" style="font-size:10px;padding:13px;">
+          Go Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="velora-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6">
+        <span class="footer-logo">VELORA</span>
+        <p class="footer-tagline">A premium fashion boutique crafting timeless wardrobes for the modern woman.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-pinterest"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="catalog.html">New Arrivals</a></li>
+          <li><a href="catalog.html">Collections</a></li>
+          <li><a href="catalog.html">Sale</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-heading">Newsletter</div>
+        <form class="footer-newsletter-input newsletter-form-js" novalidate>
+          <input type="email" placeholder="Email address" required />
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 VELORA. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+  // Show inline feedback messages
+  document.querySelectorAll('.styled-form-control').forEach(input => {
+    input.addEventListener('blur', () => {
+      const feedback = input.nextElementSibling;
+      if (feedback && feedback.classList.contains('invalid-feedback')) {
+        feedback.style.display = input.classList.contains('is-invalid') ? 'block' : 'none';
+      }
+    });
+    input.addEventListener('input', () => {
+      input.classList.remove('is-invalid');
+      const feedback = input.nextElementSibling;
+      if (feedback && feedback.classList.contains('invalid-feedback')) {
+        feedback.style.display = 'none';
+      }
+    });
+  });
+</script>
+</body>
+</html>
