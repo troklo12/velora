@@ -209,7 +209,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (stylistForm) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const russianEnglishBetweenAtAndDotRegex = /^[a-zA-Zа-яА-Я]+$/;
     const phoneRegex = /^[+]?[\d\s\-().]{7,18}$/;
+     
 
     stylistForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -234,9 +236,31 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!name?.value.trim()) { name?.classList.add('is-invalid'); valid = false; }
 
       if (!email?.value.trim() || !emailRegex.test(email.value.trim())) {
-        email?.classList.add('is-invalid');
-        valid = false;
-      }
+           email?.classList.add('is-invalid');
+           valid = false;
+         } else {
+           // Дополнительная проверка для части между "@" и "."
+           const emailParts = email.value.trim().split('@');
+         
+           if (emailParts.length === 2) {
+             const domainPart = emailParts[1]; // после "@"  
+             const domainSegments = domainPart.split('.'); // разделяем по точке
+             if (domainSegments.length >= 2) {
+               const betweenAtAndDot = domainSegments[0]; // часть между "@" и "."
+               if (!russianEnglishBetweenAtAndDotRegex.test(betweenAtAndDot)) {
+                 email?.classList.add('is-invalid');
+                 valid = false;
+               }
+             } else {
+               // если нет точки после "@" — неправильный формат
+               email?.classList.add('is-invalid');
+               valid = false;
+             }
+           } else {
+             email?.classList.add('is-invalid');
+             valid = false;
+           }
+         }
 
       if (!phone?.value.trim() || !phoneRegex.test(phone.value.trim())) {
         phone?.classList.add('is-invalid');
